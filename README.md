@@ -5,8 +5,7 @@ A Ruby CLI tool that scaffolds a **best-practice KiCad PCB project structure**.
 ## Installation
 
 ```bash
-gem build pcb-init.gemspec
-gem install ./pcb-init-0.1.0.gem
+gem install pcb-init
 ```
 
 ## Usage

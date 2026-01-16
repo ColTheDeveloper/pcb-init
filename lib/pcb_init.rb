@@ -1,11 +1,18 @@
 require 'fileutils'
 
 class PcbInit
+  VERSION = '0.1.2'
+
   def self.run(argv)
     new.run(argv)
   end
 
   def run(argv)
+    if argv.include?('--version') || argv.include?('-v')
+      show_version
+      return
+    end
+
     if argv.empty? || argv.include?('--help') || argv.include?('-h')
       show_help
       return
@@ -26,6 +33,10 @@ class PcbInit
 
   private
 
+  def show_version
+    puts "pcb-init #{VERSION}"
+  end
+
   def show_help
     puts <<~HELP
       pcb-init - Scaffold a best-practice KiCad PCB project structure
@@ -34,7 +45,8 @@ class PcbInit
         pcb-init PROJECT_NAME
 
       Options:
-        -h, --help    Show this help message
+        -h, --help       Show this help message
+        -v, --version    Show version number
 
       Example:
         pcb-init my-awesome-board

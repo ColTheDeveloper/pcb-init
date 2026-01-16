@@ -1,6 +1,8 @@
+require_relative 'lib/pcb_init'
+
 Gem::Specification.new do |spec|
   spec.name          = "pcb-init"
-  spec.version       = "0.1.0"
+  spec.version       = PcbInit::VERSION
   spec.authors       = ["Colthedeveloper"]
   spec.email         = ["colakunleumaru@gmail.com"]
 
