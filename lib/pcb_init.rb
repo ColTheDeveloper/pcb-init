@@ -1,7 +1,7 @@
 require 'fileutils'
 
 class PcbInit
-  VERSION = '0.1.2'
+  VERSION = '0.1.3'
 
   def self.run(argv)
     new.run(argv)
@@ -57,6 +57,7 @@ class PcbInit
     directories = [
       "#{project_name}/docs",
       "#{project_name}/schematic",
+      "#{project_name}/kicad_project",
       "#{project_name}/pcb",
       "#{project_name}/libraries/symbols",
       "#{project_name}/libraries/footprints",
